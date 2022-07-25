@@ -110,6 +110,8 @@ ExitState executeMotion(char const cs, KeySym const *const ks) {
 	else if (ks && *ks == XK_f) historyMove(0, 0, term.row-1+(term.c.y=0));
 	else if (ks && *ks == XK_b) historyMove(0, 0, -(term.c.y=term.row-1));
 	else if (ks && *ks == XK_h) overlay = !overlay;
+	else if (ks && *ks == XK_n) historyMove(0, 0, (int)state.m.c);
+	else if (ks && *ks == XK_p) historyMove(0, 0, -(int)state.m.c);
 	else if (cs == 'K') historyMove(0, 0, -(int)state.m.c);
 	else if (cs == 'J') historyMove(0, 0,  (int)state.m.c);
 	else if (cs == 'k') historyMove(0, -(int)state.m.c, 0);
