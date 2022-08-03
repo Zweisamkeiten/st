@@ -5,13 +5,13 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "monospace:pixelsize=32:antialias=true:autohint=true";
+static char *font = "monospace:pixelsize=36:antialias=true:autohint=true";
 #if FONT2_PATCH
 /* Spare fonts */
 static char *font2[] = {
-	"Inconsolata for Powerline:pixelsize=32:antialias=true:autohint=true",
-	"LXGW WenKai:pixelsize=32:antialias=true:autohint=true",
-	"Hack Nerd Font Mono:pixelsize=16:antialias=true:autohint=true",
+	"Inconsolata for Powerline:pixelsize=36:antialias=true:autohint=true",
+	"Hack Nerd Font Mono:pixelsize=36:antialias=true:autohint=true",
+	"LXGW WenKai:pixelsize=36:antialias=true:autohint=true",
 };
 #endif // FONT2_PATCH
 
@@ -59,7 +59,7 @@ char *vtiden = "\033[?6c";
 #endif
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 1.0;
+static float cwscale = 1.08;
 static float chscale = 1.0;
 
 /*
@@ -238,7 +238,7 @@ Glyph style[] = {{' ',ATTR_ITALIC|ATTR_FAINT,15,16}, {' ',ATTR_ITALIC,232,11},
  * 7: Blinking st cursor
  * 8: Steady st cursor
  */
-static unsigned int cursorstyle = 6;
+static unsigned int cursorstyle = 5;
 static Rune stcursor = 0x2603; /* snowman (U+2603) */
 #else
 /*
