@@ -437,7 +437,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_X,           invert,          { 0 } },
 	#endif // INVERT_PATCH
 	#if VIM_BROWSE_PATCH
-	{ MODKEY,               XK_c,           normalMode,      {.i =  0} },
+	{ MODKEY,               XK_v,           normalMode,      {.i =  0} },
 	#endif // VIM_BROWSE_PATCH
 };
 
